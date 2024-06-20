@@ -243,3 +243,45 @@ li {
 .custom-button a:hover {
     color: lightskyblue;
 }
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #f8f9fa;
+        z-index: 999;
+        padding-top: 80px; /* Учтите высоту шапки */
+        transition: left 0.3s ease;
+    }
+
+    .navigation ul.open {
+        left: 0;
+    }
+
+    .navigation ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    /* Скрытие чекбокса для мобильного меню */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Отображение меню при клике на иконку */
+    #menu-toggle:checked + .menu-icon + .navigation ul {
+        left: 0;
+    }
+}
