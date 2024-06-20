@@ -1,0 +1,337 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../img/1.jpg') fixed;
+}
+
+h2 {
+    color:#fff;
+}
+
+.site-header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-left: 20px;
+}
+
+.navigation a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #ec2828;
+}
+
+.hero {
+     /* Замените 'your-image.jpg' на путь к вашему изображению */
+    background-size: cover;
+    background-position: center;
+    height: 500px; /* Вы можете изменить высоту по вашему усмотрению */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон для улучшения читаемости текста */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Swiper styles */
+.swiper-container {
+    width: 100%;
+    height: 500px; /* Вы можете изменить высоту по вашему усмотрению */
+    overflow: hidden; /* Скрыть содержимое, выходящее за пределы контейнера */
+}
+
+.swiper-wrapper {
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-content .text {
+    position: absolute;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.342); /* Полупрозрачный черный фон для улучшения читаемости текста */
+    padding: 10px;
+    border-radius: 30px 0 30px 0;
+}
+
+.slide-content h2 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.slide-content p {
+    margin: 25px 0 0;
+    font-size: 20px;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+    position: absolute;
+    top: 50%; /* Центрирование по вертикали */
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-next {
+    right: 10px; /* Отступ от правого края */
+}
+
+.swiper-button-prev {
+    left: 10px; /* Отступ от левого края */
+}
+
+/* Swiper pagination */
+.swiper-pagination {
+    bottom: 10px; /* Расположите пагинацию внизу */
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background: #832323;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ffdd57;
+}
+
+/* containers belo-black */
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    min-height: 400px;
+    background: url('../img/5.jpg') no-repeat;
+    background-size: cover; /* Растягиваем фон на всю площадь */
+    background-position: center; /* Центрируем фон */
+}
+
+.top-section {
+    background-color: rgba(255, 255, 255, 0.8); /* Прозрачный белый фон */
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.top-section h1 {
+    font-size: 32px;
+    font-style: italic;
+}
+
+.top-section p {
+    font-size: 22px;
+    font-style: italic;
+}
+
+.middle-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Расположение блоков между собой */
+}
+
+.block {
+    width: calc(33.33% - 60px); /* Ширина блока с учетом отступов */
+    height: 250px;
+    margin-bottom: 10px; /* Отступ между блоками */
+    padding: 15px 10px 30px;
+    background-color: #581d5e; /* Цвет фона блока */
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box; /* Учесть padding в вычислении ширины блока */
+    transition: 0.3s ease;
+}
+
+.block h2 {
+    margin-bottom: 10px; /* Отступ между заголовком и абзацем */
+}
+
+.block p {
+    margin-bottom: 20px; /* Отступ между абзацем и ссылкой */
+    color: white
+}
+
+.block a {
+    text-decoration: underline; /* Подчеркивание ссылки */
+    color:#ffdd57;
+}
+.block:hover {
+    background-color: #575615;
+}
+
+@media (max-width: 1024px) {
+    .middle-section .block {
+        width: calc(50% - 20px); /* Для планшетов: по два блока в строку */
+    }
+}
+
+@media (max-width: 768px) {
+    .middle-section .block {
+        width: 100%; /* Для мобильных устройств: по одному блоку в строку */
+    }
+}
+
+.bottom-section {
+    background-color: #000000;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .middle-section .block {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .middle-section .block {
+        width: calc(100% - 20px);
+    }
+}
+
+/* футер */
+.footer {
+    background-color: #4c008252; /* Темно-фиолетовый цвет */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Затемнение */
+    z-index: 1;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+.footer h2 {
+
+    font-size: 24px;
+}
+
+.footer p {
+
+    font-size: 16px;
+}
+
+.footer a {
+    color: #ffdd57; /* Золотистый цвет */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-icons {
+    margin-top: 20px;
+}
+
+.footer .social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    background-color: #80008059; /* Фиолетовый цвет */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.social-icons:hover {
+    background-color: #ffdd5748; /* Золотистый цвет при наведении */
+    color: #ffffff; /* Темно-фиолетовый цвет при наведении */
+}
+
